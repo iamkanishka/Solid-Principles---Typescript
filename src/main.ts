@@ -60,10 +60,22 @@ class SuperCar extends Car  implements SuperInterface, SpeedyInterface{
     }
 
     hyperSpeed() {
-         return `I am Car with Super Speed`
+         return `I am Car Going with Super Speed`
     }
 }
 
+
+class SuperWorld {
+    car: SuperCar;
+    constructor(car :SuperCar){
+       this.car = car;
+    }
+
+    beginHighSpeedChase(){
+        return `${this.car.hyperSpeed()} Then i Crashed `
+    }
+} 
+ 
 const superHero = new SuperHero();
 console.log(`${superHero.Jump()} and ${superHero.fly()} because im super hero`)
 
@@ -75,6 +87,8 @@ console.log(superVillian.fly());
 const supercCar =  new SuperCar();
 console.log(`${supercCar.fly()} with ${supercCar.hyperSpeed()}`);
 
+const earth = new SuperWorld(supercCar);
+console.log(earth.beginHighSpeedChase());
 
 
 
