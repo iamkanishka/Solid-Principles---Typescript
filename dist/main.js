@@ -30,7 +30,17 @@ class SuperVillian {
         return `Im a Super Villian Flying`;
     }
 }
+class SuperCar extends Car {
+    fly() {
+        return `Super Car Flying`;
+    }
+    hyperSpeed() {
+        return `I am Car with Super Speed`;
+    }
+}
 const superHero = new SuperHero();
 console.log(`${superHero.Jump()} and ${superHero.fly()} because im super hero`);
 const superVillian = new SuperVillian();
 console.log(superVillian.fly());
+const supercCar = new SuperCar();
+console.log(`${supercCar.fly()} with ${supercCar.hyperSpeed()}`);
