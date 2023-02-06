@@ -35,3 +35,10 @@ The name open–closed principle has been used in two ways. Both ways use genera
 The Liskov substitution principle (LSP) is a particular definition of a subtyping relation, called strong behavioral subtyping, that was initially introduced by Barbara Liskov in a 1987 conference keynote address titled Data abstraction and hierarchy. 
 
 It is based on the concept of "substitutability" – a principle in object-oriented programming stating that an object (such as a class) may be replaced by a sub-object (such as a class that extends the first class) without breaking the program.
+
+
+# Interface segregation principle
+In the field of software engineering, the interface segregation principle (ISP) states that no code should be forced to depend on methods it does not use.  ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces. 
+
+ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy. ISP is one of the five SOLID principles of object-oriented design, similar to the High Cohesion Principle of GRASP.  Beyond object-oriented design, ISP is also a key principle in the design of distributed systems in general and microservices in particular. ISP is one of the six IDEALS principles for microservice design. 
+
