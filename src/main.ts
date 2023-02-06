@@ -7,40 +7,53 @@
 // I - Interface segregation principle
 
 // D - Dependency inversion principle
-  
+
 
 class Car {
-    drive(){
-         return `I'm am Driving`;
+    drive() {
+        return `I'm am Driving`;
     }
 
-    OpenDoor(){
+    OpenDoor() {
         return `I'm am Openeing Door`;
-         
+
     }
 }
 
 
-class Person{
-    walk(){
+class Person {
+    walk() {
         return `Im walking`;
     }
 
-    Jump(){
+    Jump() {
         return `I'm Jumping`;
     }
 }
 
 
-class superHero extends Person{
-    fly(){
-       return `I am Flying`; 
+interface SuperInterface {
+    fly(): string
+}
+
+class SuperHero extends Person implements SuperInterface {
+    fly() {
+        return `I am Flying`;
     }
 }
 
 
-const superPerson = new superHero();
- console.log(`${superPerson.Jump()} and ${superPerson.fly()} becassue im super hero` )
+class SuperVillian implements SuperInterface {
+    fly() {
+        return `Im a Super Villian Flying`
+    }
+}
+
+const superHero = new SuperHero();
+console.log(`${superHero.Jump()} and ${superHero.fly()} because im super hero`)
 
 
-  
+const superVillian = new SuperVillian();
+console.log(superVillian.fly());
+
+

@@ -20,10 +20,17 @@ class Person {
         return `I'm Jumping`;
     }
 }
-class superHero extends Person {
+class SuperHero extends Person {
     fly() {
         return `I am Flying`;
     }
 }
-const superPerson = new superHero();
-console.log(`${superPerson.Jump()} and ${superPerson.fly()} becassue im super hero`);
+class SuperVillian {
+    fly() {
+        return `Im a Super Villian Flying`;
+    }
+}
+const superHero = new SuperHero();
+console.log(`${superHero.Jump()} and ${superHero.fly()} because im super hero`);
+const superVillian = new SuperVillian();
+console.log(superVillian.fly());
